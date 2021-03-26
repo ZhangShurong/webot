@@ -42,6 +42,12 @@ type ReqMsg struct {
 	MsgType        string        `xml:"MsgType"`
 	Text           ReqMsgText    `xml:"Text"`
 	Attachment     MsgAttachment `xml:"Attachment"`
+	Event          Event         `xml:"Event"`
+}
+
+// Event 请求消息来源
+type Event struct {
+	EventType string `xml:"EventType"`
 }
 
 // ReqMsgFrom 请求消息来源
